@@ -1,0 +1,26 @@
+<div class="celebs-list">
+    <div class="container">
+        <h1>All the celebrities!</h1>
+        <hr>
+        <div class="row">
+            {{#each celebs}}
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+                    <div class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="card-text">{{catchPhrase}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{occupation}}</li>
+                        <form action="/celebs/delete/{{_id}}" method="POST" style="display: inline">
+                            <input type="submit" value="delete" class="btn btn-sm btn-danger">
+                        </form>
+                    </ul>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <a href="/celebs/add-new-celeb" class="btn btn-success mt-2">Add new celebrities</a>
+    </div>
+</div>

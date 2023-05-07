@@ -1,0 +1,31 @@
+<div class="movie-details">
+    <div class="container">
+
+        <h1>{{title}} details</h1>
+
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    {{!-- <img src="..." class="img-fluid rounded-start" alt="..."> --}}
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{title}}</h5>
+                        <p class="card-text">{{plot}}</p>
+                        <p class="card-text">{{genre}}</p>
+                        <p>Cast</p>
+                        {{#each cast}}
+                        <ul>
+                            <li>{{name}}</li>
+                            <li>{{occupation}}</li>
+                            <li>{{catchPhrase}}</li>
+
+                        </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
